@@ -27,4 +27,60 @@
 // {
 //     Console.WriteLine("Entrada no válida. Por favor, ingrese un número entero.");
 // }
+int opcion;
+Console.WriteLine("Calculadora V1");
+Console.WriteLine("Ingrese una opción (1: suma, 2: resta, 3: multiplicación, 4: división)");
 
+if (int.TryParse(Console.ReadLine(), out opcion) && opcion >= 1 && opcion <= 4)
+{
+    Console.WriteLine("Ingrese el primer número");
+    if (double.TryParse(Console.ReadLine(), out double num1))
+    {
+        Console.WriteLine("Ingrese el segundo número");
+        if (double.TryParse(Console.ReadLine(), out double num2))
+        {
+            double resultado = 0;
+            switch (opcion)
+            {
+
+                case 1:
+                    resultado = num1 + num2;
+                    Console.WriteLine("El resultado de la suma es " + resultado);
+                    break;
+                case 2:
+                    resultado = num1 - num2;
+                    Console.WriteLine("El resultado de la resta es " + resultado);
+                    break;
+                case 3:
+
+                    resultado = num1 * num2;
+                    Console.WriteLine("El resultado de la multiplicación es " + resultado);
+                    break;
+                case 4:
+                    if (num2 != 0)
+                    {
+
+                        resultado = num1 / num2;
+                        Console.WriteLine("El resultado de la división es " + resultado);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: No se puede dividir por cero.");
+                    }
+                    break;
+            }
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida. Por favor, ingrese un número.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Entrada no válida. Por favor, ingrese un número.");
+    }
+}
+else
+{
+    Console.WriteLine("Opción no válida. Por favor, ingrese una opción entre 1 y 4.");
+}
