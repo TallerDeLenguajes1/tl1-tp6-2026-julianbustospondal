@@ -6,7 +6,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net10.0/${workspaceFolderBasename}.dll",
+            "program": "${workspaceFolder}/bin/Debug/net10.0/tl1-tp6-2026-julianbustospondal.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
