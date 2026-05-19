@@ -8,8 +8,8 @@
 
 //ejercicio 1
 int numero;
-Console.WriteLine("ingrese un número entero:");
-if (int.TryParse(Console.ReadLine(), out numero))
+Console.WriteLine("ingrese un número entero mayor que 0:");
+if (int.TryParse(Console.ReadLine(), out numero) && numero > 0)
 {
     int aux;
 
