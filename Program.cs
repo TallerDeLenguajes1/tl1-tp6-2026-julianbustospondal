@@ -29,3 +29,27 @@ else
 }
 
 // ejercicio 2
+Console.WriteLine("Ingrese un número entero:");
+if (int.TryParse(Console.ReadLine(), out numero))
+{
+    Console.WriteLine("El valor absoluto del numero ingresado es: " + Math.Abs(numero));
+    Console.WriteLine("El cuadrado del numero ingresado es: " + Math.Pow(numero, 2));
+    Console.WriteLine("La raiz cuadrada del numero ingresado es: " + Math.Sqrt(numero));
+    Console.WriteLine("El seno del numero ingresado es: " + Math.Sin(numero).ToString("F2"));
+    Console.WriteLine("El coseno del numero ingresado es: " + Math.Cos(numero).ToString("F2"));
+    Console.WriteLine("La parte entera del numero ingresado es: " + Math.Truncate((double)numero));
+}
+else
+{
+    Console.WriteLine("Entrada no válida. Por favor, ingrese un número entero.");
+}
+Console.WriteLine("Ingrese dos números enteros:");
+if (int.TryParse(Console.ReadLine(), out int num1) && int.TryParse(Console.ReadLine(), out int num2))
+{
+    Console.WriteLine("El numero mayor entre " + num1 + " y " + num2 + " es: " + Math.Max(num1, num2));
+    Console.WriteLine("El numero menor entre " + num1 + " y " + num2 + " es: " + Math.Min(num1, num2));
+}
+else
+{
+    Console.WriteLine("Entrada no válida. Por favor, ingrese números enteros.");
+}
